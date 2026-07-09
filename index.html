@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="Lorenzo Airoldi · Portfolio certificazioni professionali: networking, AI, Linux e metodologie agili." />
+  <meta name="theme-color" content="#0a0e1a" />
+  <meta name="color-scheme" content="dark" />
+
+  <meta property="og:title" content="Lorenzo Airoldi · Certifications" />
+  <meta property="og:description" content="Raccolta di certificazioni professionali nel campo IT, networking, AI e DevOps." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://lorenzoairoldi-lab.github.io/Certificazioni" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <title>Lorenzo Airoldi · Certifications</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>" />
+</head>
+<body>
+
+  <!-- Progress bar -->
+  <div class="progress-track" id="progressTrack" aria-hidden="true">
+    <div class="progress-thumb" id="progressThumb"></div>
+  </div>
+
+  <!-- Header / Hero -->
+  <header class="hero" id="hero">
+    <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-scanline" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-label">Lorenzo Airoldi</p>
+      <h1 class="hero-title">My<br /><span>Certifications</span></h1>
+      <p class="hero-sub" id="typewriter" aria-live="polite">A compilation of officially acquired and recognized skills.</p>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num" id="total-count">0</span>
+          <span class="stat-label">📜 Certifications</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" id="cat-count">0</span>
+          <span class="stat-label">📂 Categories</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint" aria-hidden="true">
+      <svg width="24" height="36" viewBox="0 0 24 36" fill="none" aria-hidden="true">
+        <rect x="1" y="1" width="22" height="34" rx="11" stroke="currentColor" stroke-width="2" />
+        <circle cx="12" cy="11" r="3" fill="currentColor" class="scroll-dot" />
+      </svg>
+    </div>
+  </header>
+
+  <!-- Filter bar -->
+  <nav class="filter-section" id="filterSection" aria-label="Filtra certificazioni per categoria">
+    <div class="container">
+      <div class="filter-bar" role="tablist">
+        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">✨ All</button>
+        <button class="filter-btn" data-filter="network" role="tab" aria-selected="false">🌐 Networking</button>
+        <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">🤖 AI</button>
+        <button class="filter-btn" data-filter="linux" role="tab" aria-selected="false">🐧 Linux &amp; OS</button>
+        <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">📎 Other</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Cards grid (popolato da JavaScript) -->
+  <section class="cards-section" aria-label="Elenco certificazioni">
+    <div class="container">
+      <div class="cards-grid" id="cardsGrid" role="list"></div>
+      <p class="no-results" id="noResults" role="status">📭 No certifications found for this category.</p>
+    </div>
+  </section>
+
+  <!-- Badge Modal -->
+  <div class="modal-overlay" id="badgeModal" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <div class="modal-body">
+        <img class="modal-badge-img" id="modalBadgeImg" alt="" />
+      </div>
+      <div class="modal-footer">
+        <span class="modal-cert-title" id="modalCertTitle"></span>
+        <a class="card-link" id="modalLink" target="_blank" rel="noopener">🔗 View Certificate</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>Updated <span id="year"></span> &middot; Hosted on GitHub Pages</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
