@@ -7,7 +7,7 @@
       "date": "May 2026",
       "category": "network",
       "description": "Fundamentals of computer networks: OSI and TCP/IP models, IP addressing, routing, switching and communication protocols.",
-      "badgeImage": "https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/linkedin_thumb_CCNAITN__1_.png",
+      "badgeImage": "images/ccna-intro-networking-badge.png",
       "credentialUrl": "https://www.credly.com/badges/26c9c17c-5408-42a0-aa5f-990e9c82e189/public_url"
     },
     {
@@ -27,7 +27,7 @@
       "date": "May 2026",
       "category": "linux",
       "description": "Fundamentals of the Linux operating system: filesystem navigation, process management, permissions, shell scripting and essential commands.",
-      "badgeImage": "https://images.credly.com/images/e8fe3d67-2967-43d0-bc4a-7a268a37f47b/linkedin_thumb_image.png",
+      "badgeImage": "images/linux-essentials-badge.png",
       "credentialUrl": "https://www.credly.com/badges/f64d37a2-7b65-4f05-9e1f-a012ddbc5ac6"
     },
     {
