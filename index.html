@@ -1,31 +1,53 @@
 <!DOCTYPE html>
-<html lang="it">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="description" content="Lorenzo Airoldi · Portfolio certificazioni professionali: networking, AI, Linux e metodologie agili." />
+  <meta name="description" content="Lorenzo Airoldi · Cloud Engineering Portfolio — Azure, DevOps, Infrastructure as Code" />
   <meta name="theme-color" content="#0a0e1a" />
   <meta name="color-scheme" content="dark" />
 
-  <meta property="og:title" content="Lorenzo Airoldi · Certifications" />
-  <meta property="og:description" content="Raccolta di certificazioni professionali nel campo IT, networking, AI e DevOps." />
+  <meta property="og:title" content="Lorenzo Airoldi · Portfolio" />
+  <meta property="og:description" content="Cloud Engineering portfolio: skills, certifications, projects and contact information." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://lorenzoairoldi-lab.github.io/Certificazioni" />
+  <meta property="og:url" content="https://lorenzoairoldi-lab.github.io/Portfolio" />
   <meta name="twitter:card" content="summary_large_image" />
 
-  <title>Lorenzo Airoldi · Certifications</title>
+  <title>Lorenzo Airoldi · Cloud Engineering Portfolio</title>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📜</text></svg>" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☁️</text></svg>" />
 </head>
 <body>
 
-  <!-- Progress bar -->
+  <!-- ─── Progress bar ─────────────── -->
   <div class="progress-track" id="progressTrack" aria-hidden="true">
     <div class="progress-thumb" id="progressThumb"></div>
   </div>
 
-  <!-- Header / Hero -->
+  <!-- ─── Navigation ──────────────── -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">LA<span class="nav-logo-accent">.</span></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="menubar">
+        <li role="none"><a href="#about" class="nav-link" role="menuitem">About</a></li>
+        <li role="none"><a href="#skills" class="nav-link" role="menuitem">Skills</a></li>
+        <li role="none"><a href="#certifications" class="nav-link" role="menuitem">Certifications</a></li>
+        <li role="none"><a href="#projects" class="nav-link" role="menuitem">Projects</a></li>
+        <li role="none"><a href="#contact" class="nav-link" role="menuitem">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ─── Hero ─────────────────────── -->
   <header class="hero" id="hero">
     <canvas class="particle-canvas" id="particleCanvas" aria-hidden="true"></canvas>
     <div class="hero-bg" aria-hidden="true"></div>
@@ -33,17 +55,26 @@
 
     <div class="hero-content">
       <p class="hero-label">Lorenzo Airoldi</p>
-      <h1 class="hero-title">My<br /><span>Certifications</span></h1>
-      <p class="hero-sub" id="typewriter" aria-live="polite">A compilation of officially acquired and recognized skills.</p>
-      <div class="hero-stats">
+      <h1 class="hero-title">Cloud<br /><span>Engineering Portfolio</span></h1>
+      <p class="hero-sub" id="typewriter" aria-live="polite">Building secure, scalable, and reliable cloud solutions on Microsoft Azure.</p>
+      <div class="hero-cta">
+        <a href="#about" class="btn-primary">Explore &#8595;</a>
+        <a href="#contact" class="btn-outline">Get in Touch</a>
+      </div>
+      <div class="hero-stats" id="heroStats">
         <div class="stat">
-          <span class="stat-num" id="total-count">0</span>
-          <span class="stat-label">📜 Certifications</span>
+          <span class="stat-num" id="stat-certs">0</span>
+          <span class="stat-label">Certifications</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
-          <span class="stat-num" id="cat-count">0</span>
-          <span class="stat-label">📂 Categories</span>
+          <span class="stat-num" id="stat-skills">0</span>
+          <span class="stat-label">Skills</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num" id="stat-projects">0</span>
+          <span class="stat-label">Projects</span>
         </div>
       </div>
     </div>
@@ -56,22 +87,99 @@
     </div>
   </header>
 
-  <!-- Filter bar -->
-  <nav class="filter-section" id="filterSection" aria-label="Filtra certificazioni per categoria">
+  <!-- ─── About ────────────────────── -->
+  <section class="section" id="about" aria-label="About me">
     <div class="container">
-      <div class="filter-bar" role="tablist">
-        <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">✨ All</button>
-        <button class="filter-btn" data-filter="network" role="tab" aria-selected="false">🌐 Networking</button>
-        <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">🤖 AI</button>
-        <button class="filter-btn" data-filter="linux" role="tab" aria-selected="false">🐧 Linux &amp; OS</button>
-        <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">📎 Other</button>
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2 class="section-title">About Me</h2>
+        <p class="section-desc">Aspiring Cloud Engineer</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="about-greeting">
+            <span class="wave">👋</span> Hi, I'm <strong>Lorenzo Airoldi</strong>
+          </p>
+          <p>
+            I'm a Cloud Engineering student based in <strong>Turin, Italy</strong>, passionate about building
+            <strong>secure, scalable, and reliable cloud solutions</strong> on Microsoft Azure. My approach combines
+            hands-on projects, industry certifications, and continuous learning to bridge theory and real-world practice.
+          </p>
+          <p>
+            Currently working as a <strong>Cloud Specialist</strong> at <strong>ITS ICT Piemonte</strong>,
+            I specialize in Azure infrastructure, containerization with Docker and Kubernetes,
+            Infrastructure as Code with Terraform, and CI/CD automation via GitHub Actions.
+          </p>
+          <p class="about-motto">
+            "Infrastructure as code today, resilient systems tomorrow."
+          </p>
+          <div class="about-tags">
+            <span class="tag">☁️ Azure</span>
+            <span class="tag">🐳 Docker</span>
+            <span class="tag">☸️ Kubernetes</span>
+            <span class="tag">🏗️ Terraform</span>
+            <span class="tag">🔄 CI/CD</span>
+            <span class="tag">🐧 Linux</span>
+            <span class="tag">🐍 Python</span>
+          </div>
+        </div>
+        <div class="about-visual">
+          <div class="about-terminal">
+            <div class="terminal-header">
+              <span class="terminal-dot red"></span>
+              <span class="terminal-dot yellow"></span>
+              <span class="terminal-dot green"></span>
+              <span class="terminal-title">lorenzo@cloud:~$</span>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></div>
+              <div class="terminal-line output">lorenzo-airoldi</div>
+              <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat /etc/os-release</span></div>
+              <div class="terminal-line output">NAME="Cloud Engineer"</div>
+              <div class="terminal-line output">STACK="Azure · Docker · K8s · Terraform"</div>
+              <div class="terminal-line"><span class="prompt">$</span> <span class="cmd">curl -s https://linkedin.com/in/lorenzo-airoldi</span></div>
+              <div class="terminal-line output blink-cursor">_</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </nav>
+  </section>
 
-  <!-- Cards grid (popolato da JavaScript) -->
-  <section class="cards-section" aria-label="Elenco certificazioni">
+  <!-- ─── Skills ───────────────────── -->
+  <section class="section section-alt" id="skills" aria-label="Skills">
     <div class="container">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2 class="section-title">Skills &amp; Expertise</h2>
+        <p class="section-desc">Technologies and tools I work with</p>
+      </div>
+      <div class="skills-grid" id="skillsGrid">
+        <!-- Popolato da JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Certifications ──────────── -->
+  <section class="section" id="certifications" aria-label="Certifications">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-desc">Officially acquired and recognized skills</p>
+      </div>
+
+      <!-- Filter bar -->
+      <nav class="cert-filter" aria-label="Filter certifications by category">
+        <div class="filter-bar" role="tablist">
+          <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">✨ All</button>
+          <button class="filter-btn" data-filter="network" role="tab" aria-selected="false">🌐 Networking</button>
+          <button class="filter-btn" data-filter="ai" role="tab" aria-selected="false">🤖 AI</button>
+          <button class="filter-btn" data-filter="linux" role="tab" aria-selected="false">🐧 Linux</button>
+          <button class="filter-btn" data-filter="other" role="tab" aria-selected="false">📎 Other</button>
+        </div>
+      </nav>
+
       <div class="cards-grid" id="cardsGrid" role="list"></div>
       <p class="no-results" id="noResults" role="status">📭 No certifications found for this category.</p>
     </div>
@@ -80,20 +188,82 @@
   <!-- Badge Modal -->
   <div class="modal-overlay" id="badgeModal" role="dialog" aria-modal="true" aria-hidden="true">
     <div class="modal-content">
-      <button class="modal-close" id="modalClose" aria-label="Close">✕</button>
+      <button class="modal-close" id="modalClose" aria-label="Close">&#10005;</button>
       <div class="modal-body">
         <img class="modal-badge-img" id="modalBadgeImg" alt="" />
       </div>
       <div class="modal-footer">
         <span class="modal-cert-title" id="modalCertTitle"></span>
-        <a class="card-link" id="modalLink" target="_blank" rel="noopener">🔗 View Certificate</a>
+        <a class="card-link" id="modalLink" target="_blank" rel="noopener">&#128279; View Certificate</a>
       </div>
     </div>
   </div>
 
-  <!-- Footer -->
+  <!-- ─── Projects ─────────────────── -->
+  <section class="section section-alt" id="projects" aria-label="Projects">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-desc">Hands-on work and personal projects</p>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Popolato da JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ──────────────────── -->
+  <section class="section section-contact" id="contact" aria-label="Contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-number">05</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <p class="section-desc">Let's build something together</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p class="contact-intro">
+            I'm currently looking for opportunities in cloud engineering and DevOps.
+            Whether you have a question, a project idea, or just want to connect —
+            feel free to reach out!
+          </p>
+          <div class="contact-items" id="contactItems">
+            <!-- Popolato da JS -->
+          </div>
+        </div>
+        <div class="contact-form-wrap">
+          <form class="contact-form" id="contactForm" action="#" method="POST">
+            <div class="form-group">
+              <input type="text" id="formName" class="form-input" placeholder="Your name" required autocomplete="name" />
+              <label for="formName" class="form-label">Name</label>
+            </div>
+            <div class="form-group">
+              <input type="email" id="formEmail" class="form-input" placeholder="Your email" required autocomplete="email" />
+              <label for="formEmail" class="form-label">Email</label>
+            </div>
+            <div class="form-group">
+              <textarea id="formMessage" class="form-input form-textarea" placeholder="Your message" rows="5" required></textarea>
+              <label for="formMessage" class="form-label">Message</label>
+            </div>
+            <button type="submit" class="btn-primary btn-submit">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-sent">&#10003; Sent!</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ───────────────────── -->
   <footer class="site-footer">
-    <p>Updated <span id="year"></span> &middot; Hosted on GitHub Pages</p>
+    <div class="container">
+      <div class="footer-content">
+        <p class="footer-copy">&copy; <span id="year"></span> Lorenzo Airoldi &middot; Built with &#9829; for cloud</p>
+        <p class="footer-motto">Infrastructure as code today, resilient systems tomorrow.</p>
+      </div>
+    </div>
   </footer>
 
   <script src="js/app.js"></script>

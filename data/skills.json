@@ -1,0 +1,34 @@
+{
+  "skills": [
+    {
+      "category": "Cloud & DevOps",
+      "icon": "☁️",
+      "items": [
+        { "name": "Microsoft Azure", "level": 75, "description": "Azure services, resource management, IAM, networking, storage" },
+        { "name": "Docker", "level": 70, "description": "Containerization, Dockerfiles, Compose, registry management" },
+        { "name": "Kubernetes", "level": 50, "description": "Pod orchestration, deployments, services, configmaps" },
+        { "name": "Terraform", "level": 45, "description": "IaC, modules, state management, provisioning" },
+        { "name": "GitHub Actions", "level": 60, "description": "CI/CD pipelines, workflow automation, self-hosted runners" }
+      ]
+    },
+    {
+      "category": "Linux & Networking",
+      "icon": "🐧",
+      "items": [
+        { "name": "Linux Administration", "level": 75, "description": "User management, permissions, processes, systemd" },
+        { "name": "Networking", "level": 65, "description": "Subnetting, routing, DNS, VLAN, TCP/IP, OSI model" },
+        { "name": "Shell Scripting", "level": 70, "description": "Bash scripting, automation, CLI tools, grep/awk/sed" }
+      ]
+    },
+    {
+      "category": "Development",
+      "icon": "💻",
+      "items": [
+        { "name": "Python", "level": 65, "description": "Scripting, automation, CLI tools, REST APIs" },
+        { "name": "C# / .NET", "level": 55, "description": "OOP, MVC, backend services, ASP.NET" },
+        { "name": "JavaScript", "level": 60, "description": "Vanilla JS, Node.js, Express, React basics" },
+        { "name": "SQL & Databases", "level": 55, "description": "PostgreSQL, SQL queries, database design" }
+      ]
+    }
+  ]
+}

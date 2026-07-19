@@ -8,7 +8,8 @@
       "category": "network",
       "description": "Fundamentals of computer networks: OSI and TCP/IP models, IP addressing, routing, switching and communication protocols.",
       "badgeImage": "images/ccna-intro-networking-badge.png",
-      "credentialUrl": "https://www.credly.com/badges/26c9c17c-5408-42a0-aa5f-990e9c82e189/public_url"
+      "credentialUrl": "https://www.credly.com/badges/26c9c17c-5408-42a0-aa5f-990e9c82e189/public_url",
+      "status": "earned"
     },
     {
       "id": "claude-101",
@@ -18,17 +19,19 @@
       "category": "ai",
       "description": "Introduction to Claude: prompt engineering, practical use cases and best practices for interacting with AI models.",
       "badgeImage": "images/claude-101-badge.jpg",
-      "credentialUrl": "https://verify.skilljar.com/c/qemkaodngmw9"
+      "credentialUrl": "https://verify.skilljar.com/c/qemkaodngmw9",
+      "status": "earned"
     },
     {
       "id": "linux-essentials",
       "title": "Linux Essentials",
-      "issuer": "Cisco",
+      "issuer": "Cisco / LPI",
       "date": "May 2026",
       "category": "linux",
       "description": "Fundamentals of the Linux operating system: filesystem navigation, process management, permissions, shell scripting and essential commands.",
       "badgeImage": "images/linux-essentials-badge.png",
-      "credentialUrl": "https://www.credly.com/badges/f64d37a2-7b65-4f05-9e1f-a012ddbc5ac6"
+      "credentialUrl": "https://www.credly.com/badges/f64d37a2-7b65-4f05-9e1f-a012ddbc5ac6",
+      "status": "earned"
     },
     {
       "id": "agile-scrum-basics",
@@ -38,7 +41,30 @@
       "category": "other",
       "description": "Agile principles and values, Scrum framework, roles (Product Owner, Scrum Master, Dev Team), sprint planning and backlog management.",
       "badgeImage": null,
-      "credentialUrl": "https://s3.amazonaws.com/scruminc-certs/RSB-7949063"
+      "credentialUrl": "https://s3.amazonaws.com/scruminc-certs/RSB-7949063",
+      "status": "earned"
+    },
+    {
+      "id": "az-104",
+      "title": "Azure Administrator (AZ-104)",
+      "issuer": "Microsoft",
+      "date": "In progress",
+      "category": "other",
+      "description": "Microsoft Azure administration: identity, governance, storage, compute, networking and monitoring in Azure.",
+      "badgeImage": null,
+      "credentialUrl": null,
+      "status": "in-progress"
+    },
+    {
+      "id": "terraform-associate",
+      "title": "Terraform Associate (104)",
+      "issuer": "HashiCorp",
+      "date": "Planned",
+      "category": "other",
+      "description": "Infrastructure as Code with Terraform: HCL, modules, state management, provisioning and best practices.",
+      "badgeImage": null,
+      "credentialUrl": null,
+      "status": "planned"
     }
   ]
 }
