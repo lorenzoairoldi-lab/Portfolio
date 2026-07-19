@@ -17,24 +17,6 @@
       "githubUrl": "https://github.com/lorenzoairoldi-lab/Tool",
       "image": null,
       "featured": true
-    },
-    {
-      "id": "portfolio-site",
-      "title": "Personal Portfolio",
-      "description": "Interactive cloud engineering portfolio built with vanilla JavaScript and a Kubernetes-inspired dark theme. Features dynamic certification filtering, badge modals, skill visualizations, project showcase, and particle animations. Fully responsive and accessible.",
-      "techStack": ["HTML", "CSS", "JavaScript", "GitHub Pages"],
-      "githubUrl": "https://github.com/lorenzoairoldi-lab/Portfolio",
-      "image": null,
-      "featured": true
-    },
-    {
-      "id": "github-profile",
-      "title": "GitHub Profile README",
-      "description": "Personal GitHub profile overview showcasing cloud engineering journey, current certifications, technical skills, and ongoing learning path in Azure, DevOps, and Infrastructure as Code.",
-      "techStack": ["Markdown"],
-      "githubUrl": "https://github.com/lorenzoairoldi-lab/lorenzoairoldi-lab",
-      "image": null,
-      "featured": false
     }
   ]
 }

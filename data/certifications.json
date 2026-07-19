@@ -44,27 +44,5 @@
       "credentialUrl": "https://s3.amazonaws.com/scruminc-certs/RSB-7949063",
       "status": "earned"
     },
-    {
-      "id": "az-104",
-      "title": "Azure Administrator (AZ-104)",
-      "issuer": "Microsoft",
-      "date": "In progress",
-      "category": "other",
-      "description": "Microsoft Azure administration: identity, governance, storage, compute, networking and monitoring in Azure.",
-      "badgeImage": null,
-      "credentialUrl": null,
-      "status": "in-progress"
-    },
-    {
-      "id": "terraform-associate",
-      "title": "Terraform Associate (104)",
-      "issuer": "HashiCorp",
-      "date": "Planned",
-      "category": "other",
-      "description": "Infrastructure as Code with Terraform: HCL, modules, state management, provisioning and best practices.",
-      "badgeImage": null,
-      "credentialUrl": null,
-      "status": "planned"
-    }
   ]
 }

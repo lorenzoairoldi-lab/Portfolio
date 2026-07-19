@@ -250,7 +250,7 @@
   var statsObserver = new IntersectionObserver(function (entries) {
     if (entries[0].isIntersecting && !counterObserved && state.data.certs) {
       counterObserved = true;
-      animateCounter($('#stat-certs'), state.data.certs.filter(function (c) { return c.status !== 'planned'; }).length);
+      animateCounter($('#stat-certs'), state.data.certs.length);
       animateCounter($('#stat-skills'), state.data.skills.reduce(function (acc, cat) { return acc + cat.items.length; }, 0));
       animateCounter($('#stat-projects'), state.data.projects.length);
     }
@@ -288,13 +288,7 @@
         + '</div>'
         + cat.items.map(function (skill) {
           return '<div class="skill-item">'
-            + '<div class="skill-item-header">'
             + '<span class="skill-name">' + skill.name + '</span>'
-            + '<span class="skill-percent">' + skill.level + '%</span>'
-            + '</div>'
-            + '<div class="skill-bar">'
-            + '<div class="skill-bar-fill" data-width="' + skill.level + '"></div>'
-            + '</div>'
             + (skill.description ? '<p class="skill-desc">' + skill.description + '</p>' : '')
             + '</div>';
         }).join('')
@@ -303,21 +297,6 @@
 
     observeReveal('.skill-category');
   }
-
-  /* Animate skill bars when skills section is visible */
-  var skillsAnimated = false;
-  var skillsObserver = new IntersectionObserver(function (entries) {
-    if (entries[0].isIntersecting && !skillsAnimated && state.data.skills) {
-      skillsAnimated = true;
-      $$('.skill-bar-fill').forEach(function (bar) {
-        var w = bar.getAttribute('data-width');
-        requestAnimationFrame(function () {
-          bar.style.width = w + '%';
-        });
-      });
-    }
-  }, { threshold: 0.2 });
-  if (skillsGrid) skillsObserver.observe(skillsGrid);
 
   /* ─── Certifications rendering ──────────────────────── */
   function categories() {

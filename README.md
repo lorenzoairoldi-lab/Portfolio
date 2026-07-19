@@ -68,8 +68,7 @@ npx serve .
 | Claude 101 | Anthropic | ✅ Earned |
 | Linux Essentials | Cisco / LPI | ✅ Earned |
 | Agile Scrum Basics | Agile Education | ✅ Earned |
-| Azure Administrator (AZ-104) | Microsoft | 🔄 In Progress |
-| Terraform Associate (104) | HashiCorp | 📅 Planned |
+| Agile Scrum Basics | Agile Education | ✅ Earned |
 
 ## 🤝 Connect
 

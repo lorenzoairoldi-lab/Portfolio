@@ -671,45 +671,23 @@ img {
   margin-bottom: 0;
 }
 
-.skill-item-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 6px;
-}
-
 .skill-name {
+  display: block;
   font-size: 0.82rem;
   font-weight: 500;
   color: var(--text2);
-}
-
-.skill-percent {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  color: var(--muted);
-}
-
-.skill-bar {
-  height: 4px;
-  background: var(--surface2);
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.skill-bar-fill {
-  height: 100%;
-  border-radius: 4px;
-  background: linear-gradient(90deg, var(--primary), var(--primary2));
-  width: 0;
-  transition: width 1.2s var(--ease-out);
+  margin-bottom: 4px;
 }
 
 .skill-desc {
   font-size: 0.75rem;
   color: var(--muted);
-  margin-top: 4px;
   line-height: 1.4;
+  margin-bottom: 12px;
+}
+
+.skill-item:last-child .skill-desc {
+  margin-bottom: 0;
 }
 
 /* ─── Certifications ─────────────────────────────────── */
@@ -1597,7 +1575,6 @@ img {
   .hero-scanline { display: none; }
   .scroll-hint svg { animation: none; }
   .scroll-dot { animation: none; }
-  .skill-bar-fill { transition: none; }
 }
 
 /* ─── Tablet ─────────────────────────────────────────── */
